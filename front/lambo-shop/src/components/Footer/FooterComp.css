@@ -1,0 +1,76 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 5vh;
+  margin-top: auto;
+}
+
+/* ESTE es el cambio importante */
+.footer-container {
+  max-width: 1100px;          /* limita el ancho real */
+  margin: 0 auto;            /* centra el bloque entero */
+  padding: 0 20px 50px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;                 /* separación bonita entre columnas */
+  text-align: center;        /* centra el contenido de cada columna */
+}
+
+/* Secciones */
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cfcfcf;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #cfcfcf;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #8aee8a;
+}
+
+/* Parte inferior */
+.footer-bottom {
+  border-top: 1px solid #222;
+  text-align: center;
+  padding: 22px 0;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
