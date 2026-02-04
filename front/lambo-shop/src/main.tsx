@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
-import { RouterProvider,  } from 'react-router/dom'
+import { RouterProvider } from 'react-router/dom'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, Navigate, Router } from 'react-router-dom'; // Asegúrate de usar 'react-router-dom'
+import { createBrowserRouter, Navigate, Router } from 'react-router-dom';
 import RootLayout from './layouts/RootLayout';
 import HomePage from './routes/HomePage';
+import WorkshopPage from './routes/WorkshopPage';
 import './index.css'
 
 export const router = createBrowserRouter([
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
       {
         path: 'home',
         element: <HomePage />
+      },
+      {
+        path: 'workshop',
+        element: <WorkshopPage />
       }
     ],
   },

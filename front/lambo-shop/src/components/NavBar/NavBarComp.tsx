@@ -1,17 +1,20 @@
 import './NavBarComp.css'
+import { useNavigate } from 'react-router-dom'
 
 function NavBarComp() {
+  const navigate = useNavigate()
+
   return (
     <header className="header">
       <nav className="nav">
         <div className="logo">
-          <img src="/src/assets/whiteLogoLamboSHop.png" alt="Dealership Logo" />
+          <img src="/src/assets/whiteLogoLamboSHop.png" alt="Dealership Logo" onClick={() => navigate('/')}/>
         </div>
         <div className="nav-right-container">
           <ul className="nav-right">
-            <li><a href="#">Vehicles</a></li>
-            <li><a href="#">Workshop</a></li>
-            <li><a href="#">Account</a></li>
+            <li className="nav-vehicles" onClick={() => navigate('/vehicles')}>Vehicles</li>
+            <li className="nav-workshop" onClick={() => navigate('/workshop')}>Workshop</li>
+            <li className="nav-account" onClick={() => navigate('/account')}>Account</li>
           </ul>
         </div>
       </nav>
