@@ -12,30 +12,25 @@
   margin-top: auto;
 }
 
-/* ESTE es el cambio importante */
 .footer-container {
-  max-width: 1100px;          /* limita el ancho real */
-  margin: 0 auto;            /* centra el bloque entero */
+  max-width: 80%;
+  margin: 0 auto;
   padding: 0 20px 50px 20px;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px;                 /* separación bonita entre columnas */
-  text-align: center;        /* centra el contenido de cada columna */
+  gap: 80px;
+  text-align: center;
 }
 
-/* Secciones */
-.footer-section h3,
-.footer-section h4 {
+.footer-section h3{
   margin-bottom: 18px;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
 .footer-section p {
   font-size: 14px;
-  line-height: 1.7;
-  color: #cfcfcf;
+  line-height: 1.7;;
 }
 
 .footer-section ul {
@@ -50,15 +45,16 @@
 
 .footer-section a {
   text-decoration: none;
-  color: #cfcfcf;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #8aee8a;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 15px #fff;
 }
 
-/* Parte inferior */
 .footer-bottom {
   border-top: 1px solid #222;
   text-align: center;
@@ -67,7 +63,6 @@
   color: #888;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr;

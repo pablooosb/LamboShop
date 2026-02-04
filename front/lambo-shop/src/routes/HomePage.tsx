@@ -1,7 +1,6 @@
 import bgVideo from "../assets/lamboShopVideo.mp4"
 import './HomePage.css';
 
-
 export const HomePage = () => {
   return (
     <div className="homepage">
@@ -20,7 +19,7 @@ export const HomePage = () => {
 
     </div>
 
-  );
-};
+  )
+}
 
 export default HomePage

@@ -1,7 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './FooterComp.css'
 
 const FooterComp: React.FC = () => {
+  const navigate = useNavigate()
+  
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -12,16 +15,16 @@ const FooterComp: React.FC = () => {
         </div>
 
         <div className="footer-section">
-          <h4>Quick links</h4>
+          <h3>Quick links</h3>
           <ul>
-            <li><a href="#">Vehicles</a></li>
-            <li><a href="#">Workshop</a></li>
-            <li><a href="#">Account</a></li>
+            <li className="nav-vehicles" onClick={() => navigate('/vehicles')}>Vehicles</li>
+            <li className="nav-workshop" onClick={() => navigate('/workshop')}>Workshop</li>
+            <li className="nav-account" onClick={() => navigate('/account')}>Account</li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h4>Contact</h4>
+          <h3>Contact</h3>
           <p>Via Modena, 12, 40019 Sant'Agata Bolognese BO, Italia</p>
           <p>+39 0519597537</p>
           <p>sales@lamboShop.com</p>
