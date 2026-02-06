@@ -11,7 +11,7 @@ export const WorkshopPage = () => {
                 <div className="first-content">
                     <img src={workshopImg} />
                     <h1>The sanctuary of exclusivity</h1>
-                    <p>In the heart of the workshop, where the roar of the bull is refined, we don't just store parts—tenacious engineering meets pure aesthetic. From the polished curve of a custom rim to the precision-engineered flow of a high-performance exhaust, every component on these benches is a testament to automotive perfection. At LamboShop Exclusives, we don't follow the standard; we set the benchmark for those who demand nothing less than a masterpiece on wheels.</p>
+                    <p>In our workshop, tenacious engineering meets pure aesthetic. From custom rims to high-performance exhausts, every component is a testament to automotive perfection. At LamboShop Exclusives, we don't follow standards—we set the benchmark for those who demand a masterpiece on wheels.</p>
                 </div>
 
                 <div className="second-content">
@@ -29,7 +29,8 @@ export const WorkshopPage = () => {
                     <div className="second-content-text">
                         <h1>The anatomy of performance</h1>
                         <p>They say perfection is an unattainable horizon, a ghost that many chase but few ever see. But in this space, perfection isn’t a goal—it’s the baseline. Every component you see, from the forged curvature of a lightweight rim to the heat-tempered precision of an exhaust manifold, has been curated with a singular, relentless purpose: to transform raw, chaotic power into a refined and surgical driving experience.<br />
-                        This isn't merely a storage wall; it is a visual blueprint of peak performance. It is a library of speed, where every brake disc and every suspension link represents a chapter in the pursuit of the ultimate drive. We don't just "upgrade" vehicles; we deconstruct the limits of what is possible. We strip away the compromise of the assembly line to reveal the hidden soul of the machine.</p>
+                        This isn't merely a storage wall; it is a visual blueprint of peak performance. It is a library of speed, where every brake disc and every suspension link represents a chapter in the pursuit of the ultimate drive. We don't just "upgrade" vehicles; we deconstruct the limits of what is possible. We strip away the compromise of the assembly line to reveal the hidden soul of the machine.<br />
+                        Beyond the metal and the carbon fiber, we curate the adrenaline of the next corner. Here, the hum of the workshop is the prelude to the roar of the track. We don't settle for "better" when "unrivaled" is within reach. For the driver who views the road as a canvas, we provide the tools to paint in high-velocity strokes.</p>
                     </div>
                 </div>
 

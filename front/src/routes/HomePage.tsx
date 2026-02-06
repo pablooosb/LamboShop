@@ -1,4 +1,5 @@
 import bgVideo from "../assets/lamboShopVideo.mp4"
+import CarouselComp from "../components/Carousel/CarouselComp";
 import './HomePage.css';
 
 export const HomePage = () => {
@@ -17,8 +18,8 @@ export const HomePage = () => {
         </div>
       </main>
 
+      <CarouselComp />
     </div>
-
   )
 }
 
