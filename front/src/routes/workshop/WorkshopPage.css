@@ -99,12 +99,6 @@
     flex-direction: column;
 }
 
-@media (min-width: 768px) {
-    .third-content {
-        flex-direction: row-reverse;
-    }
-}
-
 .third-content h1 {
     font-size: 2rem;
     margin-bottom: 15px;
@@ -113,6 +107,12 @@
 .third-content p {
     font-size: 1.1rem;
     line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .third-content {
+        flex-direction: row-reverse;
+    }
 }
 
 @media (max-width: 768px) {
@@ -158,12 +158,4 @@
         height: 200px;
         margin: 1.5rem auto;
     }
-}
-
-.second-content p{
-    width: 100%;
-}
-
-.third-content p{
-    width: 100%;
 }

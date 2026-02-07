@@ -1,7 +1,7 @@
 import './WorkshopPage.css'
 import workshopImg from "../../assets/lamboShopWorkshop.png"
-import workbenchImg from "../../assets/lamboShopWorkshop2.png"
 import mechanicImg from "../../assets/lamboShopWorkshop3.png"
+import workbenchImg from "../../assets/lamboShopWorkshop2.png"
 
 
 export const WorkshopPage = () => {
@@ -11,7 +11,7 @@ export const WorkshopPage = () => {
                 <div className="first-content">
                     <img src={workshopImg} />
                     <h1>The sanctuary of exclusivity</h1>
-                    <p>In our workshop, tenacious engineering meets pure aesthetic. From custom rims to high-performance exhausts, every component is a testament to automotive perfection. At LamboShop Exclusives, we don't follow standards—we set the benchmark for those who demand a masterpiece on wheels.</p>
+                    <p>In our workshop, tenacious engineering meets pure aesthetic. From custom rims to high-performance exhausts, every component is a testament to automotive perfection.</p>
                 </div>
 
                 <div className="second-content">

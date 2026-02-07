@@ -12,7 +12,6 @@
 .nav {
   max-width: 1200px;
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,25 +21,6 @@
   height: 65px;
   object-fit: contain;
   cursor: pointer;
-}
-
-.nav-vehicles, .nav-workshop, .nav-offers, .nav-account{
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.nav-vehicles:hover{
-  color: #917300;
-}
-.nav-workshop:hover{
-  color: #917300;
-}
-.nav-offers:hover{
-  color: #917300;
-}
-.nav-account:hover{
-  color: #917300;
 }
 
 .nav-right-container {
@@ -55,6 +35,16 @@
   list-style: none;
   gap: 50px;
   margin: 0;
+}
+
+.nav-models, .nav-workshop, .nav-offers, .nav-account{
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+li:hover{
+  color: #917300;
 }
 
 @media (max-width: 900px) {
