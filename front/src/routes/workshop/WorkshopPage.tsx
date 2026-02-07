@@ -1,7 +1,7 @@
 import './WorkshopPage.css'
-import workshopImg from "../assets/lamboShopWorkshop.png"
-import workbenchImg from "../assets/lamboShopWorkshop2.png"
-import mechanicImg from "../assets/lamboShopWorkshop3.png"
+import workshopImg from "../../assets/lamboShopWorkshop.png"
+import workbenchImg from "../../assets/lamboShopWorkshop2.png"
+import mechanicImg from "../../assets/lamboShopWorkshop3.png"
 
 
 export const WorkshopPage = () => {

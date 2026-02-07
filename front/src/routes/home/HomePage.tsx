@@ -1,5 +1,5 @@
-import bgVideo from "../assets/lamboShopVideo.mp4"
-import CarouselComp from "../components/Carousel/CarouselComp";
+import bgVideo from "../../assets/lamboShopVideo.mp4"
+import CarouselComp from "../../components/Carousel/CarouselComp";
 import './HomePage.css';
 
 export const HomePage = () => {
