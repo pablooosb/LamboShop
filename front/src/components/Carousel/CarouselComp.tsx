@@ -28,6 +28,13 @@ function CarouselComp() {
                 <div className="seeAll" onClick={() => navigate('/vehicles')}>See all →</div>
             </div>
             <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
+
+                <div className="carousel-indicators d-md-none">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
+                </div>
                 
                 <div className="carousel-inner">
 
@@ -85,14 +92,14 @@ function CarouselComp() {
                         </div>
                     </div>
 
-            </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel"data-bs-slide="prev">
+                </div>
+                <button className="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                     <span className="custom-hex">
                         <i className="bi bi-chevron-left"></i>
                     </span>
                 </button>
 
-                <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <button className="carousel-control-next d-none d-md-block" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                     <span className="custom-hex">
                         <i className="bi bi-chevron-right"></i>
                     </span>

@@ -17,7 +17,7 @@ const FooterComp: React.FC = () => {
         <div className="footer-section">
           <h3>Quick links</h3>
           <ul>
-            <li className="nav-vehicles" onClick={() => {navigate('/vehicles'); window.scrollTo(0, 0)}}>Vehicles</li>
+            <li className="nav-models" onClick={() => {navigate('/models'); window.scrollTo(0, 0)}}>Models</li>
             <li className="nav-workshop" onClick={() => {navigate('/workshop'); window.scrollTo(0, 0)}}>Workshop</li>
             <li className="nav-account" onClick={() => {navigate('/offers'); window.scrollTo(0, 0)}}>Offers</li>
             <li className="nav-account" onClick={() => {navigate('/account'); window.scrollTo(0, 0)}}>Account</li>
