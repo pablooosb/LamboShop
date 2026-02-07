@@ -33,12 +33,6 @@
   margin: 10px;
 }
 
-.footer-section a:hover {
-  text-shadow: 
-    0 0 5px #fff,
-    0 0 15px #fff;
-}
-
 .footer-bottom {
   border-top: 1px solid #222;
   text-align: center;

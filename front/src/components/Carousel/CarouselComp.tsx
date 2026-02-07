@@ -1,5 +1,6 @@
 import "./CarouselComp.css"
 import { useNavigate } from 'react-router-dom'
+import { useState } from "react"
 import temerarioName from '/src/assets/temerario_center_light.svg'
 import temerarioImg from '/src/assets/temerario.png'
 import revueltoName from '/src/assets/revuelto_center_light.svg'
@@ -7,9 +8,18 @@ import revueltoImg from '/src/assets/revuelto.png'
 import huracanName from '/src/assets/huracan_center_light.svg'
 import huracanTecnicaImg from '/src/assets/huracanTecnica.png'
 import huracanStoImg from '/src/assets/huracanSto.png'
+import huracanSterratoImg from '/src/assets/huracanSterrato.png'
+import urusName from '/src/assets/urus_center_light.svg'
+import urusSeImg from '/src/assets/urusSe.png'
+import UrusSImg from '/src/assets/urusS.png'
+import urusPerformanteImg from '/src/assets/urusPerformante.png'
 
 function CarouselComp() {
     const navigate = useNavigate()
+    const [huracanImg, setHuracanImg] = useState(huracanTecnicaImg)
+    const [activeHuracanButton, setActiveHuracanButton] = useState("tecnica")
+    const [urusImg, setUrusImg] = useState(urusSeImg)
+    const [activeUrusButton, setActiveUrusButton] = useState("se")
 
     return (
         <div>
@@ -25,6 +35,10 @@ function CarouselComp() {
                         <div className="slide-content">
                             <img src={temerarioName} alt="Temerario name" />
                             <img src={temerarioImg} alt="Temerario image" />
+                            <div className="buttons">
+                                <button className="askOffer">Ask for offer →</button>
+                                <button className="details">See all details →</button>
+                            </div>
                         </div>
                     </div>
 
@@ -32,26 +46,46 @@ function CarouselComp() {
                         <div className="slide-content">
                             <img src={revueltoName} alt="Revuelto name" />
                             <img src={revueltoImg} alt="Revuelto image" />
+                            <div className="buttons">
+                                <button className="askOffer">Ask for offer →</button>
+                                <button className="details">See all details →</button>
+                            </div>
                         </div>
                     </div>
 
                     <div className="carousel-item">
                         <div className="slide-content">
-                            <img src={huracanName} alt="Huracan Tecnica name" />
-                            <img src={huracanTecnicaImg} alt="Huracan Tecnica image" />
+                            <img src={huracanName} alt="Huracan name" />
+                            <img src={huracanImg} alt="Huracan image" />
+                            <div className="huracans">
+                                <button className={activeHuracanButton === "tecnica" ? "active" : ""} onClick={() => {setHuracanImg(huracanTecnicaImg); setActiveHuracanButton("tecnica")}}>Huracan Tecnica</button>
+                                <button className={activeHuracanButton === "sto" ? "active" : ""} onClick={() => {setHuracanImg(huracanStoImg); setActiveHuracanButton("sto")}}>Huracan Sto</button>
+                                <button className={activeHuracanButton === "sterrato" ? "active" : ""} onClick={() => {setHuracanImg(huracanSterratoImg); setActiveHuracanButton("sterrato")}}>Huracan Sterrato</button>
+                            </div>
+                            <div className="buttons">
+                                <button className="askOffer">Ask for offer →</button>
+                                <button className="details">See all details →</button>
+                            </div>
                         </div>
                     </div>
 
                     <div className="carousel-item">
                         <div className="slide-content">
-                            <img src={huracanName} alt="Huracan Sto name" />
-                            <img src={huracanStoImg} alt="Huracan Sto image" />
+                            <img src={urusName} alt="Urus name" />
+                            <img src={urusImg} alt="Urus image" />
+                            <div className="urus">
+                                <button className={activeUrusButton === "se" ? "active" : ""} onClick={() => {setUrusImg(urusSeImg); setActiveUrusButton("se")}}>Urus Se</button>
+                                <button className={activeUrusButton === "s" ? "active" : ""} onClick={() => {setUrusImg(UrusSImg); setActiveUrusButton("s")}}>Urus S</button>
+                                <button className={activeUrusButton === "performante" ? "active" : ""} onClick={() => {setUrusImg(urusPerformanteImg); setActiveUrusButton("performante")}}>Urus Performante</button>
+                            </div>
+                            <div className="buttons">
+                                <button className="askOffer">Ask for offer →</button>
+                                <button className="details">See all details →</button>
+                            </div>
                         </div>
                     </div>
 
-
-                </div>
-
+            </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel"data-bs-slide="prev">
                     <span className="custom-hex">
                         <i className="bi bi-chevron-left"></i>
@@ -63,11 +97,6 @@ function CarouselComp() {
                         <i className="bi bi-chevron-right"></i>
                     </span>
                 </button>
-
-                <div className="buttons">
-                    <button>Ask for offer →</button>
-                    <button>See all details →</button>
-                </div>
 
             </div>
         </div>

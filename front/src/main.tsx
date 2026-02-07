@@ -3,8 +3,8 @@ import { RouterProvider } from 'react-router/dom'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, Navigate, Router } from 'react-router-dom';
 import RootLayout from './layouts/RootLayout';
-import HomePage from './routes/HomePage';
-import WorkshopPage from './routes/WorkshopPage';
+import HomePage from './routes/home/HomePage';
+import WorkshopPage from './routes/workshop/WorkshopPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';

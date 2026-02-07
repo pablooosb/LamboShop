@@ -1,1 +1,2 @@
-This is a high-end Lamborghini dealership
+<p align="center"><img src="front/src/assets/whiteLogoLamboSHop.png" alt="Logo Accesibilidad Web" width="180"></p>
+<p align="center">Is a high-end car dealership focused on providing an exclusive, elegant, and professional experience. Our catalog features carefully selected luxury vehicles, designed for clients seeking power, design, and distinction. More than just selling cars, at LamboShop we offer style, prestige, and a passion for automotive engineering. </p>

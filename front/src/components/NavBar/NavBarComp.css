@@ -24,25 +24,23 @@
   cursor: pointer;
 }
 
-.nav-vehicles, .nav-workshop, .nav-account{
+.nav-vehicles, .nav-workshop, .nav-offers, .nav-account{
   color: #ffffff;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .nav-vehicles:hover{
-  text-shadow: 
-    0 0 5px #fff,
-    0 0 15px #fff;
+  color: #917300;
 }
 .nav-workshop:hover{
-  text-shadow: 
-    0 0 5px #fff,
-    0 0 15px #fff;
+  color: #917300;
+}
+.nav-offers:hover{
+  color: #917300;
 }
 .nav-account:hover{
-  text-shadow: 
-    0 0 5px #fff,
-    0 0 15px #fff;
+  color: #917300;
 }
 
 .nav-right-container {
