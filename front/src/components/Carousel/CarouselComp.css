@@ -98,14 +98,14 @@
     object-fit: contain;
 }
 
-.askOffer{
+.addFav{
     background-color: #917300;
     color: white;
     border: 0;
     transition: 0.3s;
 }
 
-.askOffer:hover{
+.addFav:hover{
     background-color: #5e4b01;
 }
 

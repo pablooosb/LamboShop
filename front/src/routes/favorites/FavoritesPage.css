@@ -1,0 +1,198 @@
+.favorites-page {
+    min-height: calc(100vh - 80px);
+    background-color: #0a0a0a;
+    padding: 60px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.favorites-container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.favorites-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.favorites-header h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.clear-btn {
+    background: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.clear-btn:hover {
+    background: #ff4d4d;
+    color: white;
+}
+
+/* Lista de favoritos */
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.favorite-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.favorite-item:hover {
+    transform: translateX(10px);
+    border-color: #f39c12;
+}
+
+.car-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.car-thumb {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.car-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #f39c12;
+}
+
+.car-info p {
+    margin: 5px 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.car-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Botón Eliminar */
+.remove-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ccc;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Estado Vacío */
+.empty-favorites {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.empty-favorites p {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.empty-favorites button {
+    background: #f39c12;
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.favorites-summary {
+    margin-top: 30px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 2px solid rgba(243, 156, 18, 0.3); /* Borde sutil con el color dorado */
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.total-box {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.total-box h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.total-amount {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #f39c12; /* Dorado para resaltar el valor total */
+    text-shadow: 0 0 15px rgba(243, 156, 18, 0.2);
+}
+
+/* Ajuste responsivo para el total */
+@media (max-width: 600px) {
+    .favorites-summary {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .total-box {
+        align-items: center;
+    }
+
+    .total-amount {
+        font-size: 1.8rem;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .favorite-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .car-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

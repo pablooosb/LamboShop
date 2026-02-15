@@ -4,6 +4,14 @@ import './FooterComp.css'
 
 const FooterComp: React.FC = () => {
   const navigate = useNavigate()
+
+  const isAuthenticated = !!localStorage.getItem('userToken');
+
+  const handleLogout = () => {
+    localStorage.removeItem('userToken');
+    navigate('/login');
+    window.scrollTo(0, 0);
+  };
   
   return (
     <footer className="footer">
@@ -19,8 +27,13 @@ const FooterComp: React.FC = () => {
           <ul>
             <li className="nav-models" onClick={() => {navigate('/models'); window.scrollTo(0, 0)}}>Models</li>
             <li className="nav-workshop" onClick={() => {navigate('/workshop'); window.scrollTo(0, 0)}}>Workshop</li>
-            <li className="nav-account" onClick={() => {navigate('/offers'); window.scrollTo(0, 0)}}>Offers</li>
-            <li className="nav-account" onClick={() => {navigate('/account'); window.scrollTo(0, 0)}}>Account</li>
+            <li className="nav-account" onClick={() => {navigate('/favorites'); window.scrollTo(0, 0)}}>Favorites</li>
+            
+            {isAuthenticated ? (
+              <li className="nav-account" onClick={handleLogout}>Log out</li>
+            ) : (
+              <li className="nav-account" onClick={() => {navigate('/login'); window.scrollTo(0, 0)}}>Log in</li>
+            )}
           </ul>
         </div>
 

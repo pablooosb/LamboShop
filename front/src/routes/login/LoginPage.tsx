@@ -1,80 +1,74 @@
-import React, { useState, useEffect } from 'react';
-import bgVideo from "../../assets/lamboShopVideo.mp4"; 
+import { useState } from 'react';
+import type { ChangeEvent, FormEvent } from 'react'; 
+import { useNavigate, Link } from 'react-router-dom';
 import './LoginPage.css';
 
-const LoginPage: React.FC = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+const LoginPage = () => {
+    const [credentials, setCredentials] = useState({ 
+        username: '', 
+        password: '' 
+    });
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        const user = localStorage.getItem('user_token');
-        if (user) {
-            setIsLoggedIn(true);
-        }
-    }, []);
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Aquí puedes ver en consola el usuario que intenta entrar
-        console.log("Iniciando sesión con el usuario:", username);
-        
-        localStorage.setItem('user_token', 'fake-jwt-token');
-        setIsLoggedIn(true);
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setCredentials({ 
+            ...credentials, 
+            [e.target.name]: e.target.value 
+        });
     };
 
-    if (isLoggedIn) {
-        return (
-        <div className="login-container">
-            <video className="background-video" autoPlay loop muted>
-            <source src={bgVideo} type="video/mp4" />
-            </video>
-            <div className="login-content">
-            <h1>Welcome back</h1>
-            <p>You are already logged in. Redirecting to your garage...</p>
-            </div>
-        </div>
-        );
-    }
+    const handleLogin = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        
+        if (credentials.username === 'admin' && credentials.password === '1234') {
+            localStorage.setItem('userToken', 'fake-token-123')
+            navigate('/home');
+        } else {
+            setError('Invalid username or password (Try admin/1234)');
+        }
+    };
 
     return (
-        <div className="login-container">
-        <video className="background-video" autoPlay loop muted>
-            <source src={bgVideo} type="video/mp4" />
-        </video>
-
-        <div className="login-overlay">
+        <div className="login-page">
             <div className="login-card">
-            <h1>Member Login</h1>
-            <p className="subtitle">Access your exclusive experience</p>
+                <h2>Login</h2>
+                <p className="subtitle">Please enter your details to sign in</p>
+                
+                {error && <p style={{ color: '#fc4747', marginBottom: '1rem' }}>{error}</p>}
 
-            <form onSubmit={handleSubmit} className="login-form">
-                <div className="input-group">
-                <input
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                    placeholder="Username"
-                />
-                </div>
+                <form onSubmit={handleLogin}>
+                    <div className="input-group">
+                        <label>Username</label>
+                        <input 
+                            type="text" 
+                            name="username" 
+                            placeholder="Enter your username" 
+                            value={credentials.username}
+                            onChange={handleChange} 
+                            required 
+                        />
+                    </div>
+                    
+                    <div className="input-group">
+                        <label>Password</label>
+                        <input 
+                            type="password" 
+                            name="password" 
+                            placeholder="Password" 
+                            value={credentials.password}
+                            onChange={handleChange} 
+                            required 
+                        />
+                    </div>
 
-                <div className="input-group">
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    placeholder="Password"
-                />
-                </div>
+                    <button type="submit" className="btn-login">Sign In</button>
+                </form>
 
-                <button type="submit" className="btn-login">
-                Login
-                </button>
-            </form>
+                <p style={{ marginTop: '1.5rem', fontSize: '0.9rem' }}>
+                    Don't have an account? <Link to="/register" style={{ color: '#917300', textDecoration: 'none' }}>Register here</Link>
+                </p>
             </div>
-        </div>
         </div>
     );
 };

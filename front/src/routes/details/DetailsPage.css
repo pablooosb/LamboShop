@@ -83,6 +83,36 @@
     color: white;
 }
 
+.price{
+    color: white;
+}
+
+.price span{
+    font-weight: bold;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button button{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.addFav{
+    background-color: #917300;
+    color: white;
+    border: 0;
+    transition: 0.3s;
+}
+
+.addFav:hover{
+    background-color: #5e4b01;
+}
+
 @media (max-width: 768px) {
     .caracteristics > div {
         flex: 1 1 100%;
@@ -92,6 +122,9 @@
         width: 80%;
     }
     .main-container .image {
+        width: 95%;
+    }
+    .description{
         width: 95%;
     }
 }
