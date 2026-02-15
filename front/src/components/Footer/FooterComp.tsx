@@ -33,7 +33,7 @@ const FooterComp: React.FC = () => {
       </div>
 
       <div className="footer-bottom">
-        © 2026 LamboShop. All rights reserved.
+        © 2026 LamboShop | All rights reserved.
       </div>
     </footer>
   );

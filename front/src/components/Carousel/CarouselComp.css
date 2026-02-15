@@ -109,13 +109,15 @@
     background-color: #5e4b01;
 }
 
-.details{
-    background-color: white;
-    border: 1px solid black;
+.details_btn{
+    background-color: #0d0d0d;
+    color: white;
+    font-weight: normal;
+    border: 0;
     transition: 0.3s;
 }
 
-.details:hover{
+.details_btn:hover{
     font-weight: bold;
 }
 

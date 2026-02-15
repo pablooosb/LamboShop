@@ -28,6 +28,7 @@ import asteironImg from '/src/assets/asteiron.png'
 import terzoMillenoName from '/src/assets/terzo_milleno_center_light.png'
 import terzoMillenoImg from '/src/assets/terzoMilleno.png'
 
+// prueba para luego poner la base de datos
 const MODELS_DATA = [
   { id: 1, name: 'Temerario', logo: temerarioName, img: temerarioImg },
   { id: 2, name: 'Revuelto', logo: revueltoName, img: revueltoImg },
@@ -47,7 +48,7 @@ const MODELS_DATA = [
 ];
 
 function ModelsPage() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("")
 
   const [category, setCategory] = useState("Gama")
 

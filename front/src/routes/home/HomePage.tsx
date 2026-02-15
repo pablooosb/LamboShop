@@ -9,7 +9,7 @@ export const HomePage = () => {
       <main className="homepage-main">
         <video className="background-video" autoPlay loop muted>
           <source src={bgVideo} type="video/mp4" />
-          Tu navegador no soporta video.
+          Your browser does not support video.
         </video>
 
         <div className="content">

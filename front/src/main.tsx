@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { RouterProvider } from 'react-router/dom'
+import { RouterProvider } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, Navigate, Router } from 'react-router-dom';
 import RootLayout from './layouts/RootLayout';
