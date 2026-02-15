@@ -39,6 +39,7 @@ const MODELS_DATA = [
 
 function CarouselComp() {
     const navigate = useNavigate()
+    const [activeModelId, setActiveModelId] = useState(1);
     const [huracanImg, setHuracanImg] = useState(huracanTecnicaImg)
     const [activeHuracanButton, setActiveHuracanButton] = useState("tecnica")
     const [urusImg, setUrusImg] = useState(urusSeImg)
@@ -67,7 +68,7 @@ function CarouselComp() {
                             <img src={temerarioImg} alt="Temerario image" />
                             <div className="buttons">
                                 <button className="askOffer">Ask for offer →</button>
-                                <button className="details_btn">See all details →</button>
+                                <button className="details_btn" onClick={() => {navigate(`/details/1`); window.scrollTo(0, 0)}}>See all details →</button>
                             </div>
                         </div>
                     </div>
@@ -78,7 +79,7 @@ function CarouselComp() {
                             <img src={revueltoImg} alt="Revuelto image" />
                             <div className="buttons">
                                 <button className="askOffer">Ask for offer →</button>
-                                <button className="details_btn">See all details →</button>
+                                <button className="details_btn" onClick={() => {navigate(`/details/2`); window.scrollTo(0, 0)}}>See all details →</button>
                             </div>
                         </div>
                     </div>
@@ -88,13 +89,13 @@ function CarouselComp() {
                             <img src={huracanName} alt="Huracan name" />
                             <img src={huracanImg} alt="Huracan image" />
                             <div className="huracans">
-                                <button className={activeHuracanButton === "tecnica" ? "active" : ""} onClick={() => {setHuracanImg(huracanTecnicaImg); setActiveHuracanButton("tecnica")}}>Huracan Tecnica</button>
-                                <button className={activeHuracanButton === "sto" ? "active" : ""} onClick={() => {setHuracanImg(huracanStoImg); setActiveHuracanButton("sto")}}>Huracan Sto</button>
-                                <button className={activeHuracanButton === "sterrato" ? "active" : ""} onClick={() => {setHuracanImg(huracanSterratoImg); setActiveHuracanButton("sterrato")}}>Huracan Sterrato</button>
+                                <button className={activeHuracanButton === "tecnica" ? "active" : ""} onClick={() => {setHuracanImg(huracanTecnicaImg); setActiveHuracanButton("tecnica"); setActiveModelId(3)}}>Huracan Tecnica</button>
+                                <button className={activeHuracanButton === "sto" ? "active" : ""} onClick={() => {setHuracanImg(huracanStoImg); setActiveHuracanButton("sto"), setActiveModelId(4)}}>Huracan Sto</button>
+                                <button className={activeHuracanButton === "sterrato" ? "active" : ""} onClick={() => {setHuracanImg(huracanSterratoImg); setActiveHuracanButton("sterrato"), setActiveModelId(5)}}>Huracan Sterrato</button>
                             </div>
                             <div className="buttons">
                                 <button className="askOffer">Ask for offer →</button>
-                                <button className="details_btn">See all details →</button>
+                                <button className="details_btn" onClick={() => {navigate(`/details/${activeModelId}`); window.scrollTo(0, 0)}}>See all details →</button>
                             </div>
                         </div>
                     </div>
@@ -104,13 +105,13 @@ function CarouselComp() {
                             <img src={urusName} alt="Urus name" />
                             <img src={urusImg} alt="Urus image" />
                             <div className="urus">
-                                <button className={activeUrusButton === "se" ? "active" : ""} onClick={() => {setUrusImg(urusSeImg); setActiveUrusButton("se")}}>Urus Se</button>
-                                <button className={activeUrusButton === "s" ? "active" : ""} onClick={() => {setUrusImg(UrusSImg); setActiveUrusButton("s")}}>Urus S</button>
-                                <button className={activeUrusButton === "performante" ? "active" : ""} onClick={() => {setUrusImg(urusPerformanteImg); setActiveUrusButton("performante")}}>Urus Performante</button>
+                                <button className={activeUrusButton === "se" ? "active" : ""} onClick={() => {setUrusImg(urusSeImg); setActiveUrusButton("se"); setActiveModelId(6)}}>Urus Se</button>
+                                <button className={activeUrusButton === "s" ? "active" : ""} onClick={() => {setUrusImg(UrusSImg); setActiveUrusButton("s"); setActiveModelId(7)}}>Urus S</button>
+                                <button className={activeUrusButton === "performante" ? "active" : ""} onClick={() => {setUrusImg(urusPerformanteImg); setActiveUrusButton("performante"); setActiveModelId(8)}}>Urus Performante</button>
                             </div>
                             <div className="buttons">
                                 <button className="askOffer">Ask for offer →</button>
-                                <button className="details_btn">See all details →</button>
+                                <button className="details_btn" onClick={() => {navigate(`/details/${activeModelId}`); window.scrollTo(0, 0)}}>See all details →</button>
                             </div>
                         </div>
                     </div>

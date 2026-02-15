@@ -11,6 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './index.css'
 import DetailsPage from './routes/details/DetailsPage';
+import LoginPage from './routes/login/LoginPage';
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: 'details/:id',
         element: <DetailsPage />
+      },
+      {
+        path: 'login',
+        element: <LoginPage />
       }
     ],
   },

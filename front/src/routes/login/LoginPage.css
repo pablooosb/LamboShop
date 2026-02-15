@@ -1,0 +1,130 @@
+.login-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Reutilizando tu estilo de video */
+.background-video {
+    filter: brightness(15%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.login-overlay {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 5px; /* Bordes más rectos para estilo premium */
+    color: white;
+    text-align: center;
+}
+
+.login-card h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-login {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #dddddd;
+}
+
+.login-divider {
+    margin: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.login-divider span {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-social {
+    flex: 1;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-social:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.login-content {
+    color: white;
+    text-align: center;
+}

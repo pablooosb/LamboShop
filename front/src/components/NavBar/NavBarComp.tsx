@@ -15,7 +15,7 @@ function NavBarComp() {
             <li className="nav-models" onClick={() => navigate('/models')}>Models</li>
             <li className="nav-workshop" onClick={() => navigate('/workshop')}>Workshop</li>
             <li className="nav-offers" onClick={() => navigate('/offers')}>Offers</li>
-            <li className="nav-account" onClick={() => navigate('/account')}>Account</li>
+            <li className="nav-account" onClick={() => navigate('/login')}>Account</li>
           </ul>
         </div>
       </nav>
