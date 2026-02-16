@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+.workshoppage-main {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.first-content {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.first-content img {
+    filter: brightness(20%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.first-content h1 {
+    margin-bottom: 20px;
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.first-content p {
+    max-width: 800px;
+    line-height: 1.3;
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.second-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 2rem;
+    margin: 20px;
+}
+
+.second-content img {
+    width: 30%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.second-content-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-content-text h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.second-content-text p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.third-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 2rem;
+    margin: 20px;
+}
+
+.third-content img {
+    width: 30%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.second-content-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.third-content h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.third-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .third-content {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 768px) {
+    .second-content,
+    .third-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .map-container {
+        height: 250px; /* Reduce la altura en móviles */
+        margin: 2rem 1rem; /* Margen superior/inferior y lateral */
+    }
+
+    .second-content img,
+    .third-content img {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        width: calc(100% - 2rem);
+        height: 200px;
+        margin: 1.5rem auto;
+    }
+}
