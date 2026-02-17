@@ -11,7 +11,7 @@ interface FavoriteCar {
     cc: number | null;
     cv: number;
     maxSpeed: number;
-    price: number | null; // Cambiado a number | null para mayor seguridad
+    price: number | null;
 }
 
 const FavoritesPage: React.FC = () => {
@@ -49,7 +49,7 @@ const FavoritesPage: React.FC = () => {
         fetchCloudFavorites();
     }, [navigate]);
 
-    // El cálculo del total suma 0 si el precio es null
+    // If it is null, counts like 0
     const totalPrice = favorites.reduce((acc, car) => acc + (Number(car.price) || 0), 0);
 
     const removeFavorite = async (id: number) => {
