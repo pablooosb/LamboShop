@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="front/src/assets/whiteLogoLamboSHop.png">
-    <img alt="Logo Lambo Shop" src="front/src/assets/balckLogoLamboShop.png" width="180">
+    <source media="(prefers-color-scheme: dark)" srcset="front_back/src/assets/whiteLogoLamboSHop.png">
+    <img alt="Logo Lambo Shop" src="front_back/src/assets/balckLogoLamboShop.png" width="180">
   </picture>
 </p>
 <p align="center">Is a high-end car dealership focused on providing an exclusive, elegant, and professional experience. Our catalog features carefully selected luxury vehicles, designed for clients seeking power, design, and distinction. More than just selling cars, at LamboShop we offer style, prestige, and a passion for automotive engineering. </p>
